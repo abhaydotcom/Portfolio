@@ -56,13 +56,13 @@ const Contact = () => {
         <div className="absolute inset-0 -z-10 pointer-events-none bg-linear-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950"></div>
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] pointer-events-none bg-linear-to-r from-cyan-400/30 to-blue-600/30 blur-3xl rounded-full opacity-30"></div>
 
-        <div className="">
+        <div>
 
         <h1  className='text-5xl sm:text-6xl font-bold mb-10 text-center bg-linear-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text' >
           Let's Connect
         </h1>
 
-        <p className='max-w-2xl text-center text-gray-300 text-md '>
+        <p className=' text-center text-gray-300  '>
           Have a project idea, collaboration, or just want to say hi? Feel free to drop a message — I’d love to connect with you 🚀
 
 
