@@ -5,6 +5,7 @@ import App from './App.jsx'
 
 import './App.css'
 import { Toaster } from 'react-hot-toast'
+import { AnimatePresence } from 'framer-motion'
 
 
 
@@ -30,7 +31,10 @@ createRoot(document.getElementById('root')).render(
           error: { iconTheme: { primary: "#ef4444", secondary: "#fff" } },
         }}
       />
-  <App/>
+
+          <App/>
+      
+  
    
    
     

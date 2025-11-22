@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import {motion} from "framer-motion"
 
 const Navbar = () => {
  const [open, setOpen] = useState(false);
+
     const navLinks=[
         {name:"Home",path:'/'},
         {name:"Projects",path:'/projects'},
@@ -10,17 +12,27 @@ const Navbar = () => {
         {name:"Contact",path:'/contact'},
     ]
 
-    const location=useLocation();
+      const location = useLocation();
+
+
     
 
     return (
     <>
-      <nav className="fixed top-6 left-0 w-full z-50">
+      <motion.nav
+       initial={{ y: -60, opacity: 0 }}
+      animate={{ y: 0, opacity: 2 }}
+      className="fixed top-6 left-0 w-full z-50">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="bg-gray-800/95 text-white flex items-center justify-between py-3 px-4 md:px-6 rounded-3xl border border-sky-600 shadow-lg">
             <div className="flex items-center gap-3">
               <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2">
-                <span className="text-xl font-bold text-cyan-400">&lt;/&gt;</span>
+                <motion.span
+                  animate={{y:0,opacity:1}}
+                  initial={{ y: -60, opacity: 0 }}
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                className="text-xl font-bold text-cyan-400">&lt;/&gt;</motion.span>
                 <h1 className="hover:opacity-70  text-xl sm:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 tracking-tight">
                   Abhay.in
                 </h1>
@@ -30,7 +42,11 @@ const Navbar = () => {
             {/* Desktop links */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((e) => (
-                <div key={e.name} className="relative group">
+                <motion.div
+                  animate={{y:0,opacity:1}}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileHover={{ scale: 1.15, rotate: -5 }}
+                key={e.name} className="relative group">
                   <Link
                     to={e.path}
                     className={`text-md font-semibold transition-colors ${
@@ -44,7 +60,7 @@ const Navbar = () => {
                       location.pathname === e.path ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -69,7 +85,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Mobile menu: backdrop */}
       <div

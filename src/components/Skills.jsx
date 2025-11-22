@@ -12,6 +12,8 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 
+import {motion} from "framer-motion"
+
 const skills = [
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "React", icon: <SiReact /> },
@@ -30,19 +32,47 @@ export default function Skills() {
     <section className="relative py-10 px-4 sm:px-8 lg:px-20 text-center overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-transparent via-blue-50/30 to-transparent dark:via-gray-900/50" />
 
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 font-bold bg-linear-to-r from-cyan-400 via-blue-500 to-blue-700 text-transparent bg-clip-text tracking-tight">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9 }}
+      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 font-bold bg-linear-to-r from-cyan-400 via-blue-500 to-blue-700 text-transparent bg-clip-text tracking-tight">
         My Toolbox
-      </h2>
+      </motion.h2>
 
-      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 px-2">
+      <motion.p
+       initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+      className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 px-2">
         Technologies I work with every day to build fast, modern, and scalable
         applications.
-      </p>
+      </motion.p>
 
       <div className="mx-auto max-w-5xl">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 lg:gap-6">
+        <motion.div 
+           initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { staggerChildren: 0.1 },
+          },
+        }}
+        className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 lg:gap-6">
           {skills.map((skill) => (
-            <div
+            <motion.div
+             variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            whileHover={{ scale: 1.07, rotate: 1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
               key={skill.name}
               tabIndex={0}
               role="button"
@@ -75,9 +105,9 @@ export default function Skills() {
               </p>
 
               <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-linear-to-br from-cyan-400/8 to-blue-500/8 -z-10" />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
