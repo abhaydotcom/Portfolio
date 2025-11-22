@@ -34,7 +34,7 @@ const Navbar = () => {
                   transition={{ type: "spring", stiffness: 200 }}
                 className="text-xl font-bold text-cyan-400">&lt;/&gt;</motion.span>
                 <h1 className="hover:opacity-70  text-xl sm:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 tracking-tight">
-                  Abhay.in
+                  Abhaydotcom
                 </h1>
               </Link>
             </div>
