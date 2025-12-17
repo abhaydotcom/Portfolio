@@ -1,28 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {motion} from "framer-motion"
+import {AnimatePresence, motion} from "framer-motion"
 
 export default function Hero() {
+
+  const texts = [
+    'Abhay kumar singh',
+    'a Developer',
+    'a Designer',
+    'a Creator'
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative flex flex-col items-center justify-center text-center py-20 sm:py-28 md:py-40 lg:py-52 min-h-[75vh] overflow-hidden">
       <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950" />
 
       <div className="absolute -top-32 sm:-top-36 left-1/2 -translate-x-1/2 w-[360px] h-[360px] sm:w-[520px] sm:h-[520px] md:w-[700px] md:h-[700px] pointer-events-none bg-gradient-to-r from-cyan-400/30 to-blue-600/30 blur-3xl rounded-full opacity-30 -z-10" />
 
-      <div className="px-6 w-full max-w-3xl">
+      <div className="px-6 w-full max-w-6xl">
         <motion.h1
-           initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 tracking-tight">
-          Hey, I'm Abhay kumar singh
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-blue-400 flex flex-wrap items-center justify-center gap-x-3"
+        >  
+          <span>Hey, I'm</span>
+          <span className="">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentIndex}
+                initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
+                transition={{
+                  duration: 0.5,
+                  ease: 'easeInOut'
+                }}
+                className=""
+              >
+                {texts[currentIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </span>
         </motion.h1>
 
         <motion.p
-         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="mt-4 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-6 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-gray-600 dark:text-gray-300"
+        >
           A MERN Stack Developer passionate about crafting{" "}
           <span className="font-semibold text-blue-500">clean</span>,{" "}
           <span className="font-semibold text-cyan-500">scalable</span> web apps — blending logic and design.
