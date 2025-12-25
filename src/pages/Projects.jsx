@@ -5,6 +5,7 @@ import Blogz from '../../public/Blogz.jpg'
 import foodiecart from '../../public/foodiecart.jpg'
 import Movieflix from '../../public/Movieflix.jpg'
 import WeatherWeb from '../../public/WeatherWeb.jpg'
+import chatify from '../../public/image.png'
 
 
 const project=[
@@ -48,6 +49,15 @@ const project=[
     image:foodiecart,
     demo: "https://foodiecart.vercel.app/",
     github: "https://github.com/abhaydotcom/Foodie-Kart",
+  },
+   {
+    title: "Chatify",
+    description: `Built a real-time chat application with React + Zustand + WebSockets
+Authentication, online status, and real-time messaging`,
+    tech: ["React", "Web socket", "Tailwind","Node.js","MongoDB","Express"],
+    image:chatify,
+    demo: "https://chatifyweb.vercel.app/",
+    github: "https://github.com/abhaydotcom/Chatify",
   },
   
 ]
