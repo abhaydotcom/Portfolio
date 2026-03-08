@@ -4,22 +4,54 @@ import {AnimatePresence, motion} from "framer-motion"
 
 export default function Hero() {
 
-  const texts = [
-    'Abhay kumar singh',
-    'a Developer',
-    'a Designer',
-    'a Creator'
-  ];
+const texts = [
+  'Abhay Kumar Singh',
+  'a Developer',
+  'a Designer',
+  'a Creator'
+];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+const [textIndex, setTextIndex] = useState(0);
+const [charIndex, setCharIndex] = useState(0);
+const [displayText, setDisplayText] = useState('');
+const [isDeleting, setIsDeleting] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
+useEffect(() => {
+  const currentText = texts[textIndex];
 
-    return () => clearInterval(interval);
-  }, []);
+  let timeout;
+
+  if (!isDeleting && charIndex < currentText.length) {
+    timeout = setTimeout(() => {
+      setDisplayText(currentText.slice(0, charIndex + 1));
+      setCharIndex(charIndex + 1);
+    }, 110);
+  }
+
+  if (!isDeleting && charIndex === currentText.length) {
+    timeout = setTimeout(() => {
+      setIsDeleting(true);
+    }, 1200);
+  }
+
+  if (isDeleting && charIndex > 0) {
+    timeout = setTimeout(() => {
+      setDisplayText(currentText.slice(0, charIndex - 1));
+      setCharIndex(charIndex - 1);
+    }, 70);
+  }
+
+  if (isDeleting && charIndex === 0) {
+    timeout = setTimeout(() => {
+      setIsDeleting(false);
+      setTextIndex((prev) => (prev + 1) % texts.length);
+    }, 300);
+  }
+
+  return () => clearTimeout(timeout);
+}, [charIndex, isDeleting, textIndex]);
+
+
 
   return (
     <section className="relative flex flex-col items-center justify-center text-center py-20 sm:py-28 md:py-40 lg:py-52 min-h-[75vh] overflow-hidden">
@@ -34,11 +66,12 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-blue-400 flex flex-wrap items-center justify-center gap-x-3"
         >  
-          <span>Hey, I'm</span>
+          <div>Hey, I'm</div>
           <span className="">
-            <AnimatePresence mode="wait">
+            {displayText}
+            {/* <AnimatePresence mode="wait">
               <motion.span
-                key={currentIndex}
+                key={charIndex}
                 initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
@@ -48,9 +81,9 @@ export default function Hero() {
                 }}
                 className=""
               >
-                {texts[currentIndex]}
+                {displayText}
               </motion.span>
-            </AnimatePresence>
+            </AnimatePresence> */}
           </span>
         </motion.h1>
 
