@@ -6,9 +6,18 @@ import foodiecart from '../../public/foodiecart.jpg'
 import Movieflix from '../../public/Movieflix.jpg'
 import WeatherWeb from '../../public/WeatherWeb.jpg'
 import chatify from '../../public/image.png'
-
+import DashboardPage from "../../public/DashboardPage.jpg"
 
 const project=[
+
+  { title: "Job Tracker",
+    description:
+      " A job application tracker where users can log in and organize applications into stages like Wishlist, Applied, Interviewing, Offer, and Rejected. Built with Next.js, React, TypeScript, and TailwindCSS.",
+    tech: ["Next.js", "React", "TypeScript", "TailwindCSS","ShadCN"],
+    image:DashboardPage,
+    demo: "https://jobtrackerweb.vercel.app/",
+    github: "https://github.com/abhaydotcom/Job-Tracker",
+  },
   { title: "Business Landing Page",
     description:
       " A Business Solutions Landing Page with React, TailwindCSS, Framer Motion, SwiperJS, and React Icons to deliver a modern, responsive, and engaging user experience.",
