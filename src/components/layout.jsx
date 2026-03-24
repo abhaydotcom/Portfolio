@@ -21,7 +21,7 @@ export default function Layout() {
       <Navbar />
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          key={location.pathname}          // important: unique key per page
+          key={location.pathname}         
          initial="initial"
           animate="animate"
           
@@ -35,7 +35,7 @@ export default function Layout() {
           <Outlet />
         </motion.div>
       </AnimatePresence>
-      <Footer />
+      
     </>
   );
 }

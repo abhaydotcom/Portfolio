@@ -16,41 +16,6 @@ import Layout from "./components/layout"
 
 
 
-// const router=createBrowserRouter([
-//   {
-//     path:'/',
-//     element:<><Navbar></Navbar>
-//     <motion.div {...pageTransition}
-//     ><Home/></motion.div>
-//     <Footer/></>
-//   },
-//   {
-//     path:'/about',
-//     element:<><Navbar> </Navbar>  <motion.div {...pageTransition}
-//     ><About/></motion.div><Footer/> </>
-//   },
-//   {
-//     path:'/projects',
-//     element:<><Navbar/>
-//      <motion.div {...pageTransition}
-//     ><Projects/></motion.div>
-//     <Footer/></>
-//   },
-//   {
-//     path:'/contact',
-//     element:<><Navbar></Navbar>
-//     <motion.div {...pageTransition}
-//     ><Contact/></motion.div>
-    
-//     <Footer/></>
-//   },
-//   {
-//     path:'*',
-//     element:<>
-//      <motion.div {...pageTransition}
-//     ><NotFound/></motion.div></>
-//   }
-// ])
 
 const router = createBrowserRouter([
   {
