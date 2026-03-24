@@ -7,9 +7,17 @@ import Movieflix from '../../public/Movieflix.jpg'
 import WeatherWeb from '../../public/WeatherWeb.jpg'
 import chatify from '../../public/image.png'
 import DashboardPage from "../../public/DashboardPage.jpg"
+import prepPulse1 from "../../public/prepPulseai1.jpg"
 
 const project=[
-
+   { title: "PrepPulse ai",
+    description:
+      "Built an AI-powered resume analyzer (MERN) that matches resumes with job descriptions, generates interview questions, identifies skill gaps, and creates ATS-friendly PDFs using Gemini API and Puppeteer.",
+    tech: [ "React", "MongoDB","Express","Node js", "TailwindCSS","Puppeter","Gemini api"],
+    image:prepPulse1,
+    demo: "https://preppulseaiweb.vercel.app/",
+    github: "https://github.com/abhaydotcom/Ai-resume-generation",
+  },
   { title: "Job Tracker",
     description:
       " A job application tracker where users can log in and organize applications into stages like Wishlist, Applied, Interviewing, Offer, and Rejected. Built with Next.js, React, TypeScript, and TailwindCSS.",
