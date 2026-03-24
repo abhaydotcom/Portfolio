@@ -19,7 +19,6 @@ const projects = [
   {
     title: "PrepPulse AI",
     tag: "AI · Full Stack",
-    num: "01",
     description: "AI-powered resume analyzer that matches resumes with job descriptions, generates interview questions, identifies skill gaps, and creates ATS-friendly PDFs using Gemini API and Puppeteer.",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Puppeteer", "Gemini API"],
     image: prepPulse1,
@@ -30,7 +29,7 @@ const projects = [
   {
     title: "Job Tracker",
     tag: "Dashboard · TypeScript",
-    num: "02",
+
     description: "A job application tracker where users organize applications into stages — Wishlist, Applied, Interviewing, Offer, and Rejected. Built with Next.js, React, TypeScript, and TailwindCSS.",
     tech: ["Next.js", "React", "TypeScript", "TailwindCSS", "ShadCN"],
     image: DashboardPage,
@@ -41,7 +40,7 @@ const projects = [
   {
     title: "Business Landing Page",
     tag: "Frontend · Animation",
-    num: "03",
+
     description: "A Business Solutions Landing Page with React, TailwindCSS, Framer Motion, SwiperJS, and React Icons delivering a modern, responsive, and engaging experience.",
     tech: ["React", "TailwindCSS", "Framer Motion"],
     image: bussinesPage,
@@ -51,7 +50,7 @@ const projects = [
   {
     title: "Full Stack Blogz",
     tag: "MERN · Blog",
-    num: "04",
+  
     description: "A feature-rich MERN blogging platform with an intuitive user experience, Redux state management, and a comprehensive content management flow.",
     tech: ["React", "Node", "Express", "Redux", "MongoDB", "Tailwind"],
     image: Blogz,
@@ -61,7 +60,7 @@ const projects = [
   {
     title: "Movieflix",
     tag: "React · API",
-    num: "05",
+ 
     description: "A React movie app featuring live API data, movie search, detailed info pages, YouTube trailer playback, and optimized pagination.",
     tech: ["React", "Framer Motion", "Tailwind"],
     image: Movieflix,
@@ -71,7 +70,7 @@ const projects = [
   {
     title: "Weather App",
     tag: "TypeScript · TanStack",
-    num: "06",
+
     description: "A modern weather experience built with React, TypeScript, TanStack Query, and ShadCN — real-time data with a refined UI.",
     tech: ["React", "TypeScript", "ShadCN", "TanStack", "Tailwind"],
     image: WeatherWeb,
@@ -81,7 +80,7 @@ const projects = [
   {
     title: "FoodieCart",
     tag: "Frontend · UI",
-    num: "07",
+
     description: "A responsive food ordering UI built with React and Tailwind, offering smooth navigation and a clean, appetizing user experience.",
     tech: ["React", "Framer Motion", "Tailwind"],
     image: foodiecart,
@@ -91,7 +90,6 @@ const projects = [
   {
     title: "Chatify",
     tag: "Real-time · WebSocket",
-    num: "08",
     description: "Real-time chat application with React, Zustand, and WebSockets. Includes authentication, online presence indicators, and instant messaging.",
     tech: ["React", "WebSocket", "Tailwind", "Node.js", "MongoDB", "Express"],
     image: chatify,

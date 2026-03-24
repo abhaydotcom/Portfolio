@@ -1,14 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
-import Skills from "./components/Skills"
+
 import Home from "./pages/Home"
 import About from './pages/About'
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
-import {AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import Layout from "./components/layout"
 
 
