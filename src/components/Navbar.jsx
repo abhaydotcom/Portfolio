@@ -13,7 +13,7 @@ const navLinks = [
 ]
 
 
-function Logo({ onClick }) {
+export function Logo({ onClick }) {
   return (
     <Link to="/" onClick={onClick} className="flex items-center gap-2.5 group select-none">
       <motion.div
