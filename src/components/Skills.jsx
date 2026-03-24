@@ -121,7 +121,7 @@ export default function Skills() {
 
         <motion.div {...fade()} className="flex items-center gap-3 mb-10 sm:mb-14">
           <span className="w-5 h-px bg-zinc-700" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">Stack / Toolbox</span>
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">Stack / Toolbox</span>
         </motion.div>
 
         <div className="mb-12 sm:mb-16">
@@ -153,7 +153,7 @@ export default function Skills() {
 
         <motion.div {...fade(0.4)} className="flex items-center gap-4 mt-10 sm:mt-14">
           <span className="flex-1 h-px bg-white/[0.05]" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-700">
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
             {skills.length} technologies
           </span>
           <span className="flex-1 h-px bg-white/[0.05]" />

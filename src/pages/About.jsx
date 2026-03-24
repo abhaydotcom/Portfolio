@@ -36,7 +36,7 @@ export default function About() {
 
         <motion.div {...fade()} className="flex items-center gap-3 mb-10 sm:mb-14">
           <span className="w-5 h-px bg-zinc-700" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
             About Me
           </span>
         </motion.div>
@@ -123,7 +123,7 @@ export default function About() {
               {...fade(0.15)}
               className="rounded-2xl border border-white/[0.07] bg-zinc-900 p-6 sm:p-8"
             >
-              <p className="text-[10px] font-mono tracking-widest uppercase text-zinc-600 mb-5">
+              <p className="text-[10px] font-mono tracking-widest uppercase text-zinc-200 mb-5">
                 Tech Stack
               </p>
               <div className="flex flex-wrap gap-2">
@@ -147,7 +147,7 @@ export default function About() {
               {...fade(0.2)}
               className="rounded-2xl border border-white/[0.07] bg-zinc-900 p-6 sm:p-8"
             >
-              <p className="text-[10px] font-mono tracking-widest uppercase text-zinc-600 mb-5">
+              <p className="text-[10px] font-mono tracking-widest uppercase text-zinc-200 mb-5">
                 Currently
               </p>
               <ul className="flex flex-col gap-4">
@@ -187,7 +187,7 @@ export default function About() {
 
         <motion.div {...fade(0.35)} className="flex items-center gap-4 mt-14 sm:mt-20">
           <span className="flex-1 h-px bg-white/[0.06]" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-700">
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
             Always building, always learning
           </span>
           <span className="flex-1 h-px bg-white/[0.06]" />

@@ -168,38 +168,10 @@ export default function Hero() {
           <MagneticBtn to="/contact" variant="outline" className="w-full xs:w-auto">Get in Touch</MagneticBtn>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="mt-12 sm:mt-16 md:mt-20 flex items-start justify-center gap-8 sm:gap-12 md:gap-20"
-        >
-          {[
-            { num: "20+", label: "Projects" },
-            { num: "2+",  label: "Years Exp." },
-            { num: "15+", label: "Clients" },
-          ].map(({ num, label }) => (
-            <div key={label} className="stat-line text-center">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white tabular-nums">{num}</div>
-              <div className="text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-white/30 mt-1 font-medium">{label}</div>
-            </div>
-          ))}
-        </motion.div>
+       
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
-      >
-        <span className="text-[9px] tracking-[0.25em] uppercase text-white/25 font-medium">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-          className="w-px h-6 sm:h-8 bg-gradient-to-b from-white/20 to-transparent"
-        />
-      </motion.div>
+    
     </section>
   )
 }

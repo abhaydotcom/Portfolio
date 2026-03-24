@@ -79,7 +79,7 @@ export default function Contact() {
         {/* Label */}
         <motion.div {...fade()} className="flex items-center gap-3 mb-10 sm:mb-14">
           <span className="w-5 h-px bg-zinc-700" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
             Get In Touch
           </span>
         </motion.div>
@@ -115,7 +115,7 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">
+                  <label className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
                     Name
                   </label>
                   <input
@@ -129,7 +129,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">
+                  <label className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
                     Email
                   </label>
                   <input
@@ -144,7 +144,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">
+                <label className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">
                   Message
                 </label>
                 <textarea
@@ -186,10 +186,10 @@ export default function Contact() {
                       to={href}
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex items-center gap-3 text-sm text-zinc-500 hover:text-white transition-colors duration-200"
+                      className="group flex items-center gap-3 text-sm text-zinc-300 hover:text-white transition-colors duration-200"
                     >
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-zinc-950 border border-white/[0.07] group-hover:border-white/15 transition-colors duration-200">
-                        <Icon size={14} className="text-zinc-500 group-hover:text-white transition-colors duration-200" />
+                        <Icon size={14} className="text-zinc-300 group-hover:text-white transition-colors duration-200" />
                       </span>
                       <span className="truncate">{label}</span>
                     </Link>
@@ -199,7 +199,7 @@ export default function Contact() {
             </div>
 
             <div className="pt-6 border-t border-white/[0.06]">
-              <p className="text-[10px] font-mono tracking-widest uppercase text-zinc-700 mb-3">
+              <p className="text-[10px] font-mono tracking-widest uppercase text-zinc-300 mb-3">
                 Availability
               </p>
               <div className="flex items-center gap-2">
@@ -207,7 +207,7 @@ export default function Contact() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
-                <span className="text-sm text-zinc-400">Open to new opportunities</span>
+                <span className="text-sm text-zinc-300">Open to new opportunities</span>
               </div>
             </div>
           </motion.div>
@@ -216,7 +216,7 @@ export default function Contact() {
 
         <motion.div {...fade(0.3)} className="flex items-center gap-4 mt-14 sm:mt-20">
           <span className="flex-1 h-px bg-white/[0.06]" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-700">
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-300">
             Looking forward to hearing from you
           </span>
           <span className="flex-1 h-px bg-white/[0.06]" />

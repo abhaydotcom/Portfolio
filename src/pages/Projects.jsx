@@ -129,7 +129,7 @@ export default function Projects() {
 
         <motion.div {...fade()} className="flex items-center gap-3 mb-10 sm:mb-14">
           <span className="w-5 h-px bg-zinc-700" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-600">Selected Work</span>
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">Selected Work</span>
         </motion.div>
 
         <div className="mb-12 sm:mb-20">
@@ -148,7 +148,7 @@ export default function Projects() {
 
         <motion.div {...fade()} className="flex items-center gap-4 my-10 sm:my-14">
           <span className="flex-1 h-px bg-white/[0.06]" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-700">More projects</span>
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">More projects</span>
           <span className="flex-1 h-px bg-white/[0.06]" />
         </motion.div>
 
@@ -158,7 +158,7 @@ export default function Projects() {
 
         <motion.div {...fade(0.3)} className="flex items-center gap-4 mt-14 sm:mt-20">
           <span className="flex-1 h-px bg-white/[0.06]" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-700">{projects.length} projects total</span>
+          <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-200">{projects.length} projects total</span>
           <span className="flex-1 h-px bg-white/[0.06]" />
         </motion.div>
 

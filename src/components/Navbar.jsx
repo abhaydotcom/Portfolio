@@ -118,7 +118,7 @@ export default function Navbar() {
                 className="flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold tracking-wide text-[#0a0a0f] bg-[#e2ff5d] hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(226,255,93,0.25)] hover:shadow-[0_0_30px_rgba(226,255,93,0.4)]"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Hire me
+                Contact Me
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                   <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
