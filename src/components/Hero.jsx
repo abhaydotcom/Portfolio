@@ -165,7 +165,7 @@ export default function Hero() {
 
         <motion.div {...fadeUp(0.65)} className="flex flex-col xs:flex-row gap-3 sm:gap-4 items-center w-full xs:w-auto">
           <MagneticBtn to="/projects" variant="primary" className="w-full xs:w-auto">View Work <Arrow /></MagneticBtn>
-          <MagneticBtn to="/contact" variant="outline" className="w-full xs:w-auto">Get in Touch</MagneticBtn>
+          <MagneticBtn to="https://drive.google.com/file/d/1gU9tCWVT1tYlI2WHPZrRtwZF1FeWEllR/view?usp=sharing" variant="outline" className="w-full xs:w-auto">Resume</MagneticBtn>
         </motion.div>
 
        
