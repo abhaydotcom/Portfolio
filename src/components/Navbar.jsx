@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { href, Link, useLocation } from 'react-router-dom'
 import { motion,  } from 'framer-motion'
 import { Hamburger } from './Hamburger'
 import { NavLink } from './NavLink'
 import { MobileDrawer } from './MobileDrawer'
 
 const navLinks = [
-  { name: 'Home',     path: '/',        num: '01' },
-  { name: 'Projects', path: '/projects', num: '02' },
-  { name: 'About',    path: '/about',    num: '03' },
-  { name: 'Contact',  path: '/contact',  num: '04' },
+  { name: 'Home',     path: '/',         },
+  { name: 'Projects', path: '/projects',  },
+  { name: 'About',    path: '/about',     },
+  { name: 'Contact',  path: '/contact', },
+  { name: 'Resume ',  path:"https://drive.google.com/file/d/1gU9tCWVT1tYlI2WHPZrRtwZF1FeWEllR/view?usp=sharing"   },
 ]
 
 
